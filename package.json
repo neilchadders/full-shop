@@ -1,0 +1,22 @@
+{
+  "name": "full-shop",
+  "version": "2.0.0",
+  "description": "\"eCommerce full stack\"",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node back-end/index.js",
+    "server": "nodemon back-end/index.js",
+    "client": "npm start --prefix front-end",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
+  }
+}
