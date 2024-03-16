@@ -1,6 +1,9 @@
-import express from 'express'
-import products from './data/product.js'
-const port = 5000;
+import express from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
+import products from './data/product.js';
+
+const port = process.env.PORT || 5000;
 
 const app = express();
 
@@ -14,7 +17,7 @@ app.get('/api/products', (req, res) => {
 
 
 app.get('/api/products/:id', (req,res) => {
-    const product =product.find((p)=> p._id===req.params.id);
+    const product =products.find((p)=> p._id===req.params.id);
     res.json(product)
 })
 
